@@ -1,5 +1,36 @@
 ---  Shuri, Adam Wong's castle.
----  2013-10-31T14:17:20-07:00
+---  2013-10-31T15:05:19-07:00
 ---  This file was generated from generate.rb. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick.
 
-Base 03: 002b36
+base03: #002b36
+
+base02: #30626
+
+base01: #586e75
+
+base00: #657b83
+
+base0: #839496
+
+base1: #93a1a1
+
+base2: #eee8d5
+
+base3: #fdf6e3
+
+yellow: #b58900
+
+orange: #cb4b16
+
+red: #dc322f
+
+magenta: #d33682
+
+violet: #6c71c4
+
+blue: #268bd2
+
+cyan: #2aa198
+
+green: #859900
+

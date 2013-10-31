@@ -1,3 +1,4 @@
 <%= render_file "partials/header.erb", prefix: "--- " %>
-
-Base 03: <%= @config["base03"] %>
+<% @config["colors"].each do |k, v| %>
+<%= "#{k}: ##{v}" %>
+<% end %>
