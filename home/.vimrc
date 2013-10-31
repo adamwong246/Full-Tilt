@@ -1,4 +1,5 @@
-" Made with love, by Adam Wong
+"Made with love, by Adam Wong
+
 
 " Turn on line number
 :set number
