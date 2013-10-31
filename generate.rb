@@ -6,7 +6,7 @@ Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |my_text_file| # note one extr
   puts "working on: #{my_text_file}..."
   content = File.read("#{my_text_file}")
 	template = ERB.new(content)
-	File.open("home/#{File.basename(my_text_file)}", 'w') { |f| f.puts(template.result) }
+	File.open("home/#{File.basename(my_text_file, ".erb")}", 'w') { |f| f.puts(template.result) }
 end
 
 # # setup - could be initialized from script arguments
