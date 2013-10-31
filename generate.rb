@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'erb'
+require 'yaml'
  
+# author = "adam wong!!!"
+config = YAML.load_file("config.yml")
 
 Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |my_text_file| # note one extra "*"
   puts "working on: #{my_text_file}..."
