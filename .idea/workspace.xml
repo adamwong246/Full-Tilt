@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e41c62da-b459-45e7-861b-5238a27dce51" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/home/Solarized Dark.itermcolors" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/home/Solarized Dark_debug.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/#{@config[&quot;theme&quot;]}.itermcolors.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/#{@config[&quot;theme&quot;]}_debug.yml.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/demo.html" afterPath="$PROJECT_DIR$/home/demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/demo.html" afterPath="$PROJECT_DIR$/templates/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb" afterPath="$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/Shuri_Solarized Dark.tmTheme" afterPath="$PROJECT_DIR$/home/Shuri_Solarized Dark.tmTheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate.rb" afterPath="$PROJECT_DIR$/generate.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/title.erb" afterPath="$PROJECT_DIR$/partials/title.erb" />
     </list>
     <ignored path="shuri.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383287462224" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/user.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/challenge.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/controllers/challenges_controller.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/views/challenges/new/_who_can_play.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,26 +32,7 @@
     <favorites_list name="shuri" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="306" selection-end="356" vertical-scroll-proportion="0.24759285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -72,9 +55,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="1440" />
+    <option name="y" value="-300" />
     <option name="width" value="1920" />
-    <option name="height" value="874" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -169,14 +153,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="874" extended-state="0" />
-    <editor active="true" />
+    <frame x="1440" y="-300" width="1920" height="1200" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -252,16 +236,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.yml">
+    <entry file="file://$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="12" column="27" selection-start="373" selection-end="373" vertical-scroll-proportion="0.17094018">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb">
+    <entry file="file://$PROJECT_DIR$/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="306" selection-end="356" vertical-scroll-proportion="0.24759285">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

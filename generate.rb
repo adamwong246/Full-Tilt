@@ -2,6 +2,44 @@ require 'rubygems'
 require 'erb'
 require 'yaml'
 require 'debugger'
+require 'ostruct'
+
+# http://andreapavoni.com/blog/2013/4/create-recursive-openstruct-from-a-ruby-hash
+class DeepStruct < OpenStruct
+  def initialize(hash=nil)
+    @table = {}
+    @hash_table = {}
+
+    if hash
+      hash.each do |k,v|
+        @table[k.to_sym] = (v.is_a?(Hash) ? self.class.new(v) : v)
+        @hash_table[k.to_sym] = v
+
+        new_ostruct_member(k)
+      end
+    end
+  end
+
+  def to_h
+    @hash_table
+  end
+
+end
+
+
+def self.method_missing(m, *args, &block)  	
+  puts "method_missing(#{m}, #{args}, #{block})"    
+  @deep.send(m)
+
+  # if @config.has_key?(m.to_s)
+  # 	to_return = @config[m.to_s]
+  # else
+  # 	to_return = false
+  # end
+  # puts "--- returning with #{to_return}"
+  # to_return
+end 
+
 
 def darken_color(hex_color, amount)
   hex_color = hex_color.gsub('#','')
@@ -46,6 +84,7 @@ end
 
 ##### START HERE
 @config = YAML.load_file("config.yml")
+@deep = DeepStruct.new(@config)
 
 # recursively process each file
 Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
