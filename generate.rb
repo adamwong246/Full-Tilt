@@ -1,8 +1,10 @@
 require 'rubygems'
 require 'erb'
+require 'slim'
 require 'yaml'
 require 'debugger'
 require 'ostruct'
+
 
 # http://andreapavoni.com/blog/2013/4/create-recursive-openstruct-from-a-ruby-hash
 class DeepStruct < OpenStruct
@@ -68,21 +70,34 @@ def component(color, component)
 end
 
 def render_file(file, opts={})
-	# puts "\trendering #{file} with options: #{opts}"
+	#puts "\trendering #{file} with options: #{opts}"
 	content = File.read("#{file}")
-	template = ERB.new(content, nil, '-').result(binding())
+
+  case File.extname(file)
+  when ".erb"
+	  ERB.new(File.read("#{file}"), nil, '-').result(binding())
+  when ".slim"
+    Slim::Template.new(file, optional_option_hash).render(@deep)
+  else
+    raise "fail"
+  end
 end
 
 ##### START HERE
+
+Slim::Engine.set_default_options :pretty => true
+
 @config = YAML.load_file("config.yml")
 @deep = DeepStruct.new(@config)
 
 # recursively process each file
 Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
-	puts "reading #{file}..."  
-  dest = eval("\"" + "home/#{File.basename(file, ".erb")}" + "\"") 
-  File.open(dest, 'w') { |f| f.puts(render_file(file)) }  
-  puts "... written to #{dest}."
+	if !File.directory?(file) && file != ".DS_Store"
+    puts "reading #{file}..."  
+    dest = eval("\"" + "home/#{file.sub('templates/', '')}" + "\"") 
+    File.open(dest, 'w') { |f| f.puts(render_file(file)) }  
+    puts "... written to #{dest}."
+  end
 end
 
 puts "EXIT CODE 0"
