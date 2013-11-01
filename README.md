@@ -33,4 +33,4 @@
 * hack on Homesick to allow git branches and other stuff
 * please be careful not to put your sensitive data out in the open!
 
-(Oh yeah, all about Shuri Castle)[http://en.wikipedia.org/wiki/Shuri_Castle]
+[All about the real Shuri Castle](http://en.wikipedia.org/wiki/Shuri_Castle)
