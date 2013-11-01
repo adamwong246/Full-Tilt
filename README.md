@@ -13,7 +13,7 @@
 6. Install homesick and symlink everything.
         
         gem install homesick
-        homesick install git@github.com:adamwong246/shuri.git
+        homesick clone git@github.com:adamwong246/shuri.git
         homesick list
         homesick symlink shuri
         
