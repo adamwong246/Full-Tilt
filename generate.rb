@@ -28,16 +28,7 @@ end
 
 
 def self.method_missing(m, *args, &block)  	
-  puts "method_missing(#{m}, #{args}, #{block})"    
   @deep.send(m)
-
-  # if @config.has_key?(m.to_s)
-  # 	to_return = @config[m.to_s]
-  # else
-  # 	to_return = false
-  # end
-  # puts "--- returning with #{to_return}"
-  # to_return
 end 
 
 
@@ -77,7 +68,7 @@ def component(color, component)
 end
 
 def render_file(file, opts={})
-	puts "\trendering #{file} with options: #{opts}"
+	# puts "\trendering #{file} with options: #{opts}"
 	content = File.read("#{file}")
 	template = ERB.new(content, nil, '-').result(binding())
 end
@@ -91,8 +82,7 @@ Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
 	puts "reading #{file}..."  
   dest = eval("\"" + "home/#{File.basename(file, ".erb")}" + "\"") 
   File.open(dest, 'w') { |f| f.puts(render_file(file)) }  
-  puts "written to #{dest}."
+  puts "... written to #{dest}."
 end
 
-puts ""
-puts "EXIT 0"
+puts "EXIT CODE 0"
