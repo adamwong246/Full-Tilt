@@ -22,12 +22,12 @@
 
 #### Protips
 * You can interpolate file names just like you would any string. ```#{@config["theme"]}.itermcolors.erb``` becomes ```Solarized Dark.itermcolors```
-* Use any configuration variables you want! Just define them in ```config.yml``` and use them in the templates
+* Use any configuration variables you want! Anything in ```config.yml``` becomes part of the hash ```@config.```
 * Keep your code nice and DRY. Use partials like so ```<%= render_file "partials/header.erb", {prefix: "\""} %>``` So far, only 1 option: prefix, which adds a character to the beginning of each line, which is used for making comments.
 
 
 #### Yet to come...
-* make some themes- Solarized Dark is always popular.
+* make some themes- Solarized Dark is always popular
 * k-clustering to create color themes from an image
 * limit each line to 80 characters
 * hack on Homesick to allow git branches and other stuff
