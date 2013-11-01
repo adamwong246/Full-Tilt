@@ -3,20 +3,30 @@ require 'erb'
 require 'yaml'
 require 'debugger'
 
-# get the configs
-@config = YAML.load_file("config.yml")
+def red_component_as_percent(color)
+	component_as_percent(color, :red)
+end
 
-# renders erb to string
+def blue_component_as_percent(color)
+	component_as_percent(color, :blue)
+end
+
+def green_component_as_percent(color)
+	component_as_percent(color, :green)
+end
+
+def component_as_percent(color, component)
+	color + component.to_s
+end
+
 def render_file(file, opts={})
-
 	puts "rendering #{file} with options: #{opts}"
-	
-	opts[:prefix] ||= ""
-	opts[:suffix] ||= ""
-
 	content = File.read("#{file}")
 	template = ERB.new(content, nil, '-').result(binding())
 end
+
+##### START HERE
+@config = YAML.load_file("config.yml")
 
 # recursively process each file
 Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
