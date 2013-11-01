@@ -17,10 +17,9 @@
         homesick list
         homesick symlink shuri
         
-7. ???
-8. Profit!
+7. Hail to the king, baby!
 
-#### Protips
+#### Tips
 * You can interpolate file names just like you would any string. ```#{@config["theme"]}.itermcolors.erb``` becomes ```Solarized Dark.itermcolors```
 * Use any configuration variables you want! Anything in ```config.yml``` becomes part of the hash ```@config.```
 * Keep your code nice and DRY. Use partials like so ```<%= render_file "partials/header.erb", {prefix: "\""} %>``` So far, only 1 option: prefix, which adds a character to the beginning of each line, which is used for making comments.
