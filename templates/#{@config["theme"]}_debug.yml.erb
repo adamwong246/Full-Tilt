@@ -1,4 +1,4 @@
 <%= render_file "partials/header.erb", prefix: "# " %>
 <% @config["colors"].each do |k, v| -%>
-<%= "#{k}: #{v}" %>
+<%= "#{k}: '#{v}'" %>
 <% end -%>
