@@ -14,7 +14,7 @@ def render_file(file, opts={})
 	opts[:suffix] ||= ""
 
 	content = File.read("#{file}")
-	template = ERB.new(content).result(binding())
+	template = ERB.new(content, nil, '-').result(binding())
 end
 
 # recursively process each file
