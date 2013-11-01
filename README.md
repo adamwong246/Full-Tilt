@@ -6,22 +6,16 @@
 1. Put configuration variables in config.yml.
 2. Make a template for each configuration file you want to generate. 
 3. Fill in the blanks with erb and salt to taste.
-4. Generate your files
-
-``` terminal
-ruby generate.rb
-```
-
+4. Generate all your files in one fell swoop
+    ```ruby generate.rb```
 5. Push your repo github. 
 6. Install homesick and symlink everything
-
-``` terminal
-gem install homesick
-homesick install git@github.com:adamwong246/shuri.git
-homesick list
-homesick symlink shuri
-```
-
+    ``` terminal
+    gem install homesick
+    homesick install git@github.com:adamwong246/shuri.git
+    homesick list
+    homesick symlink shuri
+    ```
 7. ???
 8. Profit!
 
