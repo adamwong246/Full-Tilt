@@ -11,10 +11,10 @@
 5. Push your repo github. 
 6. Install homesick and symlink everything
     ``` terminal
-    gem install homesick
-    homesick install git@github.com:adamwong246/shuri.git
-    homesick list
-    homesick symlink shuri
+        gem install homesick
+        homesick install git@github.com:adamwong246/shuri.git
+        homesick list
+        homesick symlink shuri
     ```
 7. ???
 8. Profit!
