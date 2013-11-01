@@ -1,0 +1,43 @@
+<%= render_file "partials/header.erb", prefix: "<!-- ", suffix: ' -->' %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title><%= render_file "partials/title.erb" %></title>
+  <style>
+	  <% @config["colors"].each do |k, v| %>
+			<%#= ".#{k}{ color: ##{v}; background-color: ##{v}}" %>
+		<% end %>
+  </style>
+</head>
+<body>
+	<table>
+		<caption>Every color, set against every other color</caption>
+		<% @config["colors"].to_a.reverse.each do |k, v| %>
+			<tr style="background-color:#<%= "#{v}" %>;" >
+				<% @config["colors"].to_a.each do |kk, vv| %>
+					<td>
+						<p style="color:#<%= "#{vv}" %>;" >
+							<%= "#{kk}: #{vv}" %>
+						</p>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>	  
+	</table>		
+	<table>
+		<caption>Every color, set against shades of gray</caption>
+		<% (1..10).each do |i| %>
+			<tr >
+				<% @config["colors"].to_a.each do |k, v| %>
+					<td style="color:#<%= "#{v}" %>;" >
+						<p style="background-color:<%= "#{black_white(i/10.to_f)}" %>;" >
+							<%= "#{k}: #{v}" %>
+						</p>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>	  
+	</table>
+</body>
+</html>

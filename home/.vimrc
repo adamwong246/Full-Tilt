@@ -1,6 +1,7 @@
 " Shuri, Adam Wong's castle.       
-" 2013-10-31T19:27:07-07:00        
-" This file was generated from generate.rb. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick. 
+" Thursday, Oct 31        
+" This file was generated from generate.rb to using the Solarized Dark theme. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick. 
+" Licensed under the do whatever you want license.     
 
 " Turn on line number
 :set number
