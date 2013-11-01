@@ -4,6 +4,8 @@ require 'slim'
 require 'yaml'
 require 'debugger'
 require 'ostruct'
+require 'fileutils'
+
 
 
 # http://andreapavoni.com/blog/2013/4/create-recursive-openstruct-from-a-ruby-hash
@@ -83,6 +85,32 @@ def render_file(file, opts={})
   end
 end
 
+def make_directories(src_dir, dest_dir)
+  Dir.glob("#{src_dir}/**/*/", File::FNM_DOTMATCH) do |file|
+    puts file
+    new_dest = "#{dest_dir}/" + file.sub("#{src_dir}/", "")
+    puts new_dest
+
+    Dir.mkdir(new_dest) if !File.exists?(new_dest)
+  end
+end
+
+def proccess_files(src_dir, dest_dir, &block)
+
+  make_directories(src_dir, dest_dir)
+
+  Dir.glob("#{src_dir}/**/**", File::FNM_DOTMATCH) do |file|
+
+    if File.file?(file) 
+      puts file
+      new_dest = "#{dest_dir}/" + file.sub("#{src_dir}/", "")
+      puts new_dest
+
+      File.open(new_dest, 'w') { |f| f.puts("derp") } 
+    end
+  end
+end
+
 ##### START HERE
 
 Slim::Engine.set_default_options :pretty => true
@@ -90,14 +118,19 @@ Slim::Engine.set_default_options :pretty => true
 @config = YAML.load_file("config.yml")
 @deep = DeepStruct.new(@config)
 
-# recursively process each file
-Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
-	if !File.directory?(file) && file != ".DS_Store"
-    puts "reading #{file}..."  
-    dest = eval("\"" + "home/#{file.sub('templates/', '')}" + "\"") 
-    File.open(dest, 'w') { |f| f.puts(render_file(file)) }  
-    puts "... written to #{dest}."
-  end
+proccess_files("templates", "home") do |f|
+  puts f
 end
+
+
+# # recursively process each file
+# Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
+# 	if !File.directory?(file) && file != ".DS_Store"
+#     puts "reading #{file}..."  
+#     dest = eval("\"" + "home/#{file.sub('templates/', '')}" + "\"") 
+#     File.open(dest, 'w') { |f| f.puts(render_file(file)) }  
+#     puts "... written to #{dest}."
+#   end
+# end
 
 puts "EXIT CODE 0"
