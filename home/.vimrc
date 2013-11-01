@@ -1,5 +1,5 @@
 " Shuri, Adam Wong's castle.       
-" Thursday, Oct 31        
+" Friday, Nov 01        
 " This file was generated from generate.rb to using the Solarized Dark theme. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick. 
 " Licensed under the do whatever you want license.     
 
