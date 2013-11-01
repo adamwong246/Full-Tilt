@@ -1,5 +1,5 @@
 " Shuri, Adam Wong's castle.
-" 2013-10-31T17:49:17-07:00
+" 2013-10-31T17:59:50-07:00
 " This file was generated from generate.rb. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick.
 
 " Turn on line number

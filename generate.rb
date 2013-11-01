@@ -18,8 +18,6 @@ def render_file(file, opts={})
 	template = ERB.new(content, nil, '-').result(binding())
 end
 
-theme = @config["theme"]
-
 # recursively process each file
 Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
 	puts "reading #{file}..."  
