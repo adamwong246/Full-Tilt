@@ -1,17 +1,22 @@
-This is my dotfiles repo. It is to be used with Homesick but was generated programatically. 
+# Shuri, my own private Castle
 
-How?
-Put any configuration variables you want in config.yml.
-Make a template for each configuration file you want to generate. Put it in home, with a matching path to where you want the config file to end up.
-Templates end in .erb. Fill in the blanks with ruby code and salt to taste. When you are ready
+## Dotfiles generated with Ruby, distributed and tracked with git and installed with [Homesick](https://github.com/technicalpickles/homesick) 
+
+### How?
+1. Put any configuration variables you want in config.yml.
+2. Make a template for each configuration file you want to generate. 
+3. Fill in the blanks with ruby code and salt to taste.
+4. Generate your files
 ```
 ruby generate.rb
 ```
-
-Push your repo somewhere. Then, install homesick and
+5. Push your repo github. 
+6. Install homesick and symlink everything
 ```
+gem install homesick
 homesick install git@github.com:adamwong246/shuri.git
+homesick list
 homesick symlink shuri
 ```
-
-and that's it!
+7. ???
+8. Profit!
