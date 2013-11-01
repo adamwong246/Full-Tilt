@@ -1,8 +1,8 @@
-# Shuri, my own private Castle
+## Shuri, my own private Castle
 
-## Dotfiles generated with Ruby, distributed and tracked with git and installed with [Homesick](https://github.com/technicalpickles/homesick) 
+### Dotfiles generated with Ruby, distributed and tracked with git and installed with [Homesick](https://github.com/technicalpickles/homesick) 
 
-### How?
+#### How?
 1. Put configuration variables in config.yml.
 2. Make a template for each configuration file you want to generate. 
 3. Fill in the blanks with erb and salt to taste.
@@ -20,17 +20,17 @@
 7. ???
 8. Profit!
 
-### Protips
-
+#### Protips
 * You can interpolate file names just like you would any string. ```#{@config["theme"]}.itermcolors.erb``` becomes ```Solarized Dark.itermcolors```
 * Use any configuration variables you want! Just define them in ```config.yml``` and use them in the templates
-* Define partials to keep your code nice and DRY.```<%= render_file "partials/header.erb", {prefix: "\""} %>``` So far, only 1 option: prefix, which adds a character to the beginning of each line. Usefull for making comments!
+* Keep your code nice and DRY. Use partials like so ```<%= render_file "partials/header.erb", {prefix: "\""} %>``` So far, only 1 option: prefix, which adds a character to the beginning of each line, which is used for making comments.
 
 
-### Yet to come...
-
+#### Yet to come...
 * make some themes- Solarized Dark is always popular.
 * k-clustering to create color themes from an image
 * limit each line to 80 characters
 * hack on Homesick to allow git branches and other stuff
 * please be careful not to put your sensitive data out in the open!
+
+(Oh yeah, all about Shuri Castle)[http://en.wikipedia.org/wiki/Shuri_Castle]
