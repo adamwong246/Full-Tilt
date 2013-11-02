@@ -3,6 +3,7 @@ require 'erb'
 # require 'slim'
 require 'yaml'
 # require 'debugger'
+require 'ostruct'
 
 Bundler.require
 
@@ -18,7 +19,8 @@ SOURCE_DIR    = ROOT.join(SRC)
 TEMPLATES_DIR = SOURCE_DIR.join(TEMPLATES)
 PARTIALS_DIR  = SOURCE_DIR.join("partials")
 
-class ErbBinding < OpenStruct
+class ErbBinding < RecursiveOpenStruct
+
     def get_binding
         return binding()
     end
@@ -26,6 +28,10 @@ class ErbBinding < OpenStruct
     def method_missing(meth, *args)
       raise "Error: #{meth} is not defined".blue.on_red unless meth.to_s.end_with?('=')
       super
+    end
+
+    def each
+      self_as_a_hash.to_a.each
     end
 
     def merge(hash)      
@@ -37,14 +43,50 @@ class ErbBinding < OpenStruct
       # merge the new options in to self
       self.merge(opts)
 
+      puts "rendering #{file.blue} with #{self.to_s.green}"
       template = File.new(file).read
       ERB.new(template, nil, '-').result(instance_eval { binding })
     end
+
+    def darken_color(hex_color, amount)
+      hex_color = hex_color.gsub('#','')
+      rgb = hex_color.scan(/../).map {|color| color.hex}
+      rgb[0] = (rgb[0].to_i * amount).round
+      rgb[1] = (rgb[1].to_i * amount).round
+      rgb[2] = (rgb[2].to_i * amount).round
+      "#%02x%02x%02x" % rgb
+    end
+
+    def black_white(ratio)
+      darken_color("#FFFFFF", ratio)
+    end
+
+    def red_component_as_percent(color)
+      component(color, :red) / 255.to_f
+    end
+
+    def blue_component_as_percent(color)
+      component(color, :blue) / 255.to_f
+    end
+
+    def green_component_as_percent(color)
+      component(color, :green) / 255.to_f
+    end
+
+    def component(color, component)
+      map = {
+        red: 0,
+        green: 1,
+        blue: 2
+      }
+      color.scan(/../).map {|color| color.to_i(16)}[map[component]]
+    end
+
 end
 
 task :default do
   conf = YAML.load_file("config.yml")
-  namespace = ErbBinding.new(conf)
+  
 
   # make all the directories we need
   Dir.glob("#{TEMPLATES_DIR}/**/*/", File::FNM_DOTMATCH) do |file|
@@ -62,13 +104,13 @@ task :default do
 
       file_name_input  = file_name
       puts "#{file_name_input}..."
-      template = File.new(file_name_input).read
-      
-      output_string = ERB.new(template, nil, '-').result(namespace.instance_eval { binding })
+
+      namespace = ErbBinding.new(conf, :recurse_over_arrays => true)
+      output_string = namespace.render(file_name_input)
 
       file_name_output = file_name.gsub(TEMPLATES, HOME).gsub(SRC, BUILD).chomp(File.extname(file_name))
       File.open(file_name_output, 'w') { |f| f.puts(output_string) }
-      puts "...#{file_name_output}"
+      puts "...#{file_name_output}".red
     end
   end
 

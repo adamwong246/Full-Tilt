@@ -1,7 +1,7 @@
-" Adam Wong's castle.       !!!
-" Saturday, Nov 02        !!!
-" This file was generated from the Solarized Dark theme. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick. !!!
-" Licensed under the do whatever you want license.     !!!
+" Castle Shuri: the dotfiles of Adam Wong       
+" 2013 Nov  2,  2:21 AM        
+" This file was generated from the Solarized Dark theme. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick: https://github.com/technicalpickles/homesick. 
+" Licensed under the GNU GENERAL PUBLIC LICENSE.      
 
 " Turn on line number
 :set number
