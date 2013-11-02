@@ -5,36 +5,19 @@ require 'yaml'
 require 'debugger'
 require 'ostruct'
 require 'fileutils'
+require 'erubis'
 
-
-
-# http://andreapavoni.com/blog/2013/4/create-recursive-openstruct-from-a-ruby-hash
-class DeepStruct < OpenStruct
-  def initialize(hash=nil)
-    @table = {}
-    @hash_table = {}
-
-    if hash
-      hash.each do |k,v|
-        @table[k.to_sym] = (v.is_a?(Hash) ? self.class.new(v) : v)
-        @hash_table[k.to_sym] = v
-
-        new_ostruct_member(k)
-      end
-    end
+class Namespace
+  def initialize(hash)
+    hash.each do |key, value|
+      singleton_class.send(:define_method, key) { value }
+    end 
   end
 
-  def to_h
-    @hash_table
+  def get_binding
+    binding
   end
-
 end
-
-
-def self.method_missing(m, *args, &block)  	
-  @deep.send(m)
-end 
-
 
 def darken_color(hex_color, amount)
   hex_color = hex_color.gsub('#','')
@@ -68,69 +51,55 @@ def component(color, component)
 		blue: 2
 	}
 	color.scan(/../).map {|color| color.to_i(16)}[map[component]]
-
-end
-
-def render_file(file, opts={})
-	#puts "\trendering #{file} with options: #{opts}"
-	content = File.read("#{file}")
-
-  case File.extname(file)
-  when ".erb"
-	  ERB.new(File.read("#{file}"), nil, '-').result(binding())
-  when ".slim"
-    Slim::Template.new(file, optional_option_hash).render(@deep)
-  else
-    raise "fail"
-  end
 end
 
 def make_directories(src_dir, dest_dir)
   Dir.glob("#{src_dir}/**/*/", File::FNM_DOTMATCH) do |file|
-    puts file
+    puts "making directory: #{file}"
     new_dest = "#{dest_dir}/" + file.sub("#{src_dir}/", "")
-    puts new_dest
 
     Dir.mkdir(new_dest) if !File.exists?(new_dest)
   end
 end
 
-def proccess_files(src_dir, dest_dir, &block)
+def render_file(file, opts={})
+  render_template(File.new(file).read, opts)
+end
 
-  make_directories(src_dir, dest_dir)
+def render_template(template, opts={})  
+  ns = Namespace.new(@@hash.merge(opts))
+  ERB.new(template).result(ns.get_binding)
+end
 
+def make_files(src_dir, dest_dir, &block)
   Dir.glob("#{src_dir}/**/**", File::FNM_DOTMATCH) do |file|
 
-    if File.file?(file) 
-      puts file
-      new_dest = "#{dest_dir}/" + file.sub("#{src_dir}/", "")
-      puts new_dest
+    if File.file?(file)
+    
+      result = render_file(file, @@hash)
 
-      File.open(new_dest, 'w') { |f| f.puts("derp") } 
+      dest_dir = "home"
+      src_dir = "templates"
+
+      string_to_eval = dest_dir + file.sub(src_dir, '')
+      puts string_to_eval
+
+      new_dest = render_template(string_to_eval,@@hash ).chomp(File.extname(file))      
+
+      File.open(new_dest, 'w') { |f| f.puts(result) }      
     end
   end
 end
 
-##### START HERE
-
-Slim::Engine.set_default_options :pretty => true
-
-@config = YAML.load_file("config.yml")
-@deep = DeepStruct.new(@config)
-
-proccess_files("templates", "home") do |f|
-  puts f
+def proccess_files(src_dir, dest_dir, &block)
+  make_directories(src_dir, dest_dir)
+  make_files(src_dir, dest_dir)  
 end
 
+##### START HERE
+@@hash = YAML.load_file("config.yml")
+# @conf = DeepStruct.new(YAML.load_file("config.yml"))
 
-# # recursively process each file
-# Dir.glob("templates/**/*", File::FNM_DOTMATCH) do |file| # note one extra "*"
-# 	if !File.directory?(file) && file != ".DS_Store"
-#     puts "reading #{file}..."  
-#     dest = eval("\"" + "home/#{file.sub('templates/', '')}" + "\"") 
-#     File.open(dest, 'w') { |f| f.puts(render_file(file)) }  
-#     puts "... written to #{dest}."
-#   end
-# end
+proccess_files("templates", "home") 
 
 puts "EXIT CODE 0"
