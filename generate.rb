@@ -96,8 +96,7 @@ def make_files(src_dir, dest_dir, opts)
 
       string_to_eval = dest_dir + file.sub(src_dir, '')
 
-      debugger
-      final_file = render_template(string_to_eval, @@hash)  # Proc.new { |var| eval(%Q{"#{string_to_eval}"})  }.call 
+      final_file = eval "\"#{string_to_eval}\""  # Proc.new { |var| eval(%Q{"#{string_to_eval}"})  }.call 
       
       new_dest = render_template(final_file, opts ).chomp(File.extname(file))      
 
