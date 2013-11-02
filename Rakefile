@@ -39,12 +39,14 @@ class ErbBinding < RecursiveOpenStruct
     end
 
     def render(file, opts={})
-
-      # merge the new options in to self
-      self.merge(opts)
-
       puts "rendering #{file.blue} with #{self.to_s.green}"
       template = File.new(file).read
+      render_string(template, opts)      
+    end
+
+    def render_string(template, opts={})
+      # merge the new options in to self
+      self.merge(opts)
       ERB.new(template, nil, '-').result(instance_eval { binding })
     end
 
@@ -109,6 +111,8 @@ task :default do
       output_string = namespace.render(file_name_input)
 
       file_name_output = file_name.gsub(TEMPLATES, HOME).gsub(SRC, BUILD).chomp(File.extname(file_name))
+      debugger
+      
       File.open(file_name_output, 'w') { |f| f.puts(output_string) }
       puts "...#{file_name_output}".red
     end
