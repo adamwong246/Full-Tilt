@@ -6,3 +6,4 @@ gem 'slim'
 gem 'debugger'
 gem "colorize", "~> 0.6.0"
 gem 'recursive-open-struct'
+gem 'liquid'

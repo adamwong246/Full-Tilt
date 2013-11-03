@@ -12,6 +12,7 @@ BUILD         = "build"
 HOME          = "Home"
 SRC           = "src"
 TEMPLATES     = "templates"
+CONF          = "config.yml"
 
 BUILD_DIR     = ROOT.join(BUILD)
 HOME_DIR      = BUILD_DIR.join(HOME)
@@ -87,18 +88,24 @@ class ErbBinding < RecursiveOpenStruct
 end
 
 task :default do
-  conf = YAML.load_file("config.yml")
+  conf = YAML.load_file(CONF)
+
+  puts Dir.pwd
+
+  Liquid::Template.file_system = Liquid::LocalFileSystem.new(SOURCE_DIR) 
+   
   
 
   # make all the directories we need
   Dir.glob("#{TEMPLATES_DIR}/**/*/", File::FNM_DOTMATCH) do |file|
     puts "making directory: #{file}"
     new_dest = "#{HOME_DIR}/" + file.sub("#{TEMPLATES_DIR}/", "")
-    Dir.mkdir(new_dest) if !File.exists?(new_dest)
+    new_dest_interp = Liquid::Template.parse(new_dest).render! conf
+    Dir.mkdir(new_dest_interp) if !File.exists?(new_dest_interp)
   end
 
-  # compile all ERB the files
-  Dir.glob("#{TEMPLATES_DIR}/**/*.erb", File::FNM_DOTMATCH) do |file_name|
+  # compile all the liquid files
+  Dir.glob("#{TEMPLATES_DIR}/**/*.liquid", File::FNM_DOTMATCH) do |file_name|
     if File.file?(file_name)
       
       file_name_base   = File.basename(file_name, '.*')
@@ -107,14 +114,17 @@ task :default do
       file_name_input  = file_name
       puts "#{file_name_input}..."
 
-      namespace = ErbBinding.new(conf, :recurse_over_arrays => true)
-      output_string = namespace.render(file_name_input)
+      template = File.new(file_name_input).read
+      
+      # https://www.altamiracorp.com/blog/employee-posts/better-jekyll-error-reporting
+      output_string = Liquid::Template.parse(template).render! conf
 
       file_name_output = file_name.gsub(TEMPLATES, HOME).gsub(SRC, BUILD).chomp(File.extname(file_name))
-      debugger
-      
-      File.open(file_name_output, 'w') { |f| f.puts(output_string) }
-      puts "...#{file_name_output}".red
+
+      file_name_output_inter = Liquid::Template.parse(file_name_output).render! conf
+
+      File.open(file_name_output_inter, 'w') { |f| f.puts(output_string) }
+      puts "...#{file_name_output_inter}"
     end
   end
 

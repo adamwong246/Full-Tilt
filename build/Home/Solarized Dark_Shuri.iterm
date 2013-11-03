@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+Castle Shuri: the dotfiles of Adam Wong
+This file was generated from the Solarized Dark theme. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick: https://github.com/technicalpickles/homesick.
+Licensed under the GNU GENERAL PUBLIC LICENSE. 
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+	<key><%= color_title %></key>
+	<dict>
+		<key>Blue Component</key>
+		<real><%= blue_component_as_percent(color ) %></real>
+		<key>Green Component</key>
+		<real><%= green_component_as_percent(color ) %></real>
+		<key>Red Component</key>
+		<real><%= red_component_as_percent(color ) %></real>
+	</dict>
+</dict>
+</plist>
