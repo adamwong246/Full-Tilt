@@ -1,4 +1,15 @@
+=== This is a demo of the Liquid template language. ===
+{% comment %} This is a comment. It should NOT appear in the compiled file. {% endcomment %} (there's a comment here but you can't see it! )
+= Some variables that were defined in config.yml =
 {{ author }}
 {{ castle }}
 {{ theme }}
 {{ colors }}
+= Let's perform a loop over all colors =
+{% for color in colors %}
+{{color[0]}}: {{color[1]}}
+{% endfor %}
+= An example of variable assignment =
+{% assign hw = 'Hello World!' %}
+{{ hw }}
+
