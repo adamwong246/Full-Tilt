@@ -1,9 +1,4 @@
- 
 Castle Shuri: the dotfiles of Adam Wong
-Mon, Nov 04, 13
-This file was generated from the Solarized Dark theme. It can be found here: https://github.com/adamwong246/shuri. It was made to work with homesick: https://github.com/technicalpickles/homesick.
-Licensed under the GNU GENERAL PUBLIC LICENSE. 
-
 " Turn on line number
 :set number
 

@@ -1,4 +1,4 @@
-{% include 'header' with {pre: ' <- ', suf: ' -> '} %}
+<%= Tilt.new('src/includes/_title.erb').render (self)  %>
 
 " Turn on line number
 :set number
