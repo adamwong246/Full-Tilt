@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require 'rubygems' 
+require 'bundler/setup'
+
 require 'yaml'
 require 'pathname'
 require 'liquid'
@@ -8,12 +11,14 @@ ROOT          = Pathname(File.dirname(__FILE__)).parent
 BUILD         = "build"
 HOME          = "Home"
 SRC           = "src"
+INCLUDES      = "includes"
 TEMPLATES     = "templates"
 CONF          = "config.yml"
 
 BUILD_DIR     = ROOT.join(BUILD)
 HOME_DIR      = BUILD_DIR.join(HOME)
 SOURCE_DIR    = ROOT.join(SRC)
+INCLUDE_DIR   = SOURCE_DIR.join(INCLUDES) 
 TEMPLATES_DIR = SOURCE_DIR.join(TEMPLATES)
 PARTIALS_DIR  = SOURCE_DIR.join("partials")
 
@@ -26,7 +31,7 @@ conf = YAML.load_file(CONF)
 # puts "HOME_DIR      - #{HOME_DIR}"
 # puts "TEMPLATES_DIR - #{TEMPLATES_DIR}"
 
-Liquid::Template.file_system = Liquid::LocalFileSystem.new(SOURCE_DIR)
+Liquid::Template.file_system = Liquid::LocalFileSystem.new(INCLUDE_DIR)
 # Liquid::Template.error_mode = :strict 
  
 # make all the directories we need

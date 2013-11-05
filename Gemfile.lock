@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/Shopify/liquid.git
+  revision: 445f19d454deb4ae4c8712d301fd4683998c7ad2
+  branch: master
+  specs:
+    liquid (3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -9,7 +16,6 @@ GEM
       debugger-ruby_core_source (~> 1.2.3)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.3)
-    liquid (2.5.3)
     rake (10.1.0)
     recursive-open-struct (0.4.5)
     sass (3.2.12)
@@ -26,7 +32,7 @@ DEPENDENCIES
   bundler
   colorize (~> 0.6.0)
   debugger
-  liquid
+  liquid!
   rake
   recursive-open-struct
   sass

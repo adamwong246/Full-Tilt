@@ -1,15 +1,19 @@
 === This is a demo of the Liquid template language. ===
 {% comment %} This is a comment. It should NOT appear in the compiled file. {% endcomment %} (there's a comment here but you can't see it! )
-= Some variables that were defined in config.yml =
-{{ author }}
+
+= Some variables that were defined in config.yml ={{ author }}
 {{ castle }}
 {{ theme }}
 {{ colors }}
-= Let's perform a loop over all colors =
-{% for color in colors %}
-{{color[0]}}: {{color[1]}}
-{% endfor %}
-= An example of variable assignment =
-{% assign hw = 'Hello World!' %}
-{{ hw }}
 
+= Let's perform a loop over all colors ={% for color in colors %}
+{{color[0]}}: {{color[1]}}{% endfor %}
+
+= An example of variable assignment =
+{% assign hw = 'Hello World!' %} {{ hw }}
+
+= An very loooon variable assignment =
+{% assign li = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, ducimus quam dignissimos aliquip dolore molestiae animi tempor rerum consequatur laboriosam expedita eius, cillum repudiandae mollit sed, commodi. pariatur consectetur veniam veniam eos tempora ullamco cupidatat. atque commodi cum soluta temporibus distinctio. ad nostrum occaecat vel quaerat do voluptas. ad nam commodo soluta quaerat quibusdam qui asperiores minus. quia elit irure incididunt quidem autem. iusto excepturi fugiat aliquam nobis.!' %} {{ li | prettyprint}}
+
+= An Include with a variable =
+{% include 'derp' with 'you love it!' %}

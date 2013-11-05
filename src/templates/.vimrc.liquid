@@ -1,6 +1,4 @@
-{% assign name = 'freestyle' %}
-{{ name }}
-"{% include 'partials/header' param=name %}
+{% include 'header' with {pre: ' <- ', suf: ' -> '} %}
 
 " Turn on line number
 :set number

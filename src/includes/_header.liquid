@@ -1,4 +1,5 @@
-{% include 'partials/title' %}
-{% include 'partials/description' %}
-{{ partials/header.param }}
-{% include 'partials/license' %}
+{% comment %} Here, header is a forward comment character {% endcomment %} 
+{{header}}{% include 'title' %}
+{{header}}{% include 'date' %}
+{{header}}{% include 'description' %}
+{{header}}{% include 'license' %}
