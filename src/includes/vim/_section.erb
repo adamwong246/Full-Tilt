@@ -1,0 +1,11 @@
+<%= "\"" * 80 %>
+
+<%= word_wrap(self[:header_title], {prefix: "\" "})  %>
+
+<%= word_wrap(self[:header_description], {prefix: "\" "})  %>
+
+<%= "\"" * 80 %>
+
+<%= yield %>
+
+<%= "\"" * 80 %>

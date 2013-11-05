@@ -1,3 +1,5 @@
+<%= word_wrap((Tilt.new('src/includes/_signature.erb').render (self)), {prefix: "\" "})  %>
+
 <%= word_wrap((Tilt.new('src/includes/_title.erb').render (self)), {prefix: "\" "})  %>
 
 <%= word_wrap((Tilt.new('src/includes/_date.erb').render (self)), {prefix: "\" "})  %>

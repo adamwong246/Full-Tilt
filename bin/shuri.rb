@@ -42,15 +42,15 @@ conf = YAML.load_file(CONF)
 # end
 
 #https://github.com/rails/rails/blob/58ab79ff9b34c22c3477e29763fdd4f4612e938d/actionpack/lib/action_view/helpers/text_helper.rb#L216
-def word_wrap(text, options = {})
-  line_width = options.fetch(:line_width, 80)
+def word_wrap(text, options = {})  
   prefix     = options.fetch(:prefix, "")
   suffix     = options.fetch(:suffix, "")
+  line_width = options.fetch(:line_width, 80) - prefix.length - suffix.length
 
   (text.split("\n").map { |line|
     line.length > line_width ? line.gsub(/(.{1,#{line_width}})(\s+|$)/, "\\1\n").strip : line 
   } * "\n").split("\n").map { |line|
-    prefix + line + suffix
+    prefix + line + (" " * [(line_width - line.length ), 0].max) + suffix
   }.join("\n")
 
 end
@@ -77,6 +77,7 @@ Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
       
     rescue Exception => e
       puts e.message.blue
+      puts e.backtrace
     end      
 
 
