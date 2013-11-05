@@ -1,4 +1,5 @@
-<%= Tilt.new('src/includes/_title.erb').render (self)  %>
+<%= Tilt.new('src/includes/_header.erb').render (self.merge({prefix: '"'}))  %>
+
 
 " Turn on line number
 :set number
@@ -6,10 +7,7 @@
 " Turn on syntax highlighting
 :syntax on
 
-" Allow mouse scrolling
-set mouse=a
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+<%= Tilt.new('src/includes/vim/_baby.erb').render self  %>
 
 " Word wrap without line breaks
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks

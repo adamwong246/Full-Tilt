@@ -41,6 +41,20 @@ conf = YAML.load_file(CONF)
 #   Dir.mkdir(new_dest_interp) if !File.exists?(new_dest_interp)
 # end
 
+#https://github.com/rails/rails/blob/58ab79ff9b34c22c3477e29763fdd4f4612e938d/actionpack/lib/action_view/helpers/text_helper.rb#L216
+def word_wrap(text, options = {})
+  line_width = options.fetch(:line_width, 80)
+  prefix     = options.fetch(:prefix, "")
+  suffix     = options.fetch(:suffix, "")
+
+  (text.split("\n").map { |line|
+    line.length > line_width ? line.gsub(/(.{1,#{line_width}})(\s+|$)/, "\\1\n").strip : line 
+  } * "\n").split("\n").map { |line|
+    prefix + line + suffix
+  }.join("\n")
+
+end
+
 # compile all the liquid files
 Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
   if File.file?(file_name)    
@@ -71,8 +85,6 @@ Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
     # output_string = Liquid::Template.parse(template).render! conf
     # file_name_output = file_name.gsub(TEMPLATES, HOME).gsub(SRC, BUILD).chomp(File.extname(file_name))
     # file_name_output_inter = Liquid::Template.parse(file_name_output).render! conf
-
-
     
   end
 end
