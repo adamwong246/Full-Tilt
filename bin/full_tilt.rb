@@ -111,7 +111,7 @@ Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
       file_name_output = file_name.gsub(TEMPLATES, HOME).gsub(SRC, BUILD).chomp(File.extname(file_name))
 
       file_name_output_template = Tilt.new(File.extname(file_name)){file_name_output}
-      file_name_output_inter = file_name_output_template.render conf
+      file_name_output_inter = file_name_output_template.render(conf).strip
 
 
       puts "...#{file_name_output_inter}"
