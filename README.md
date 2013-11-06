@@ -1,6 +1,8 @@
-## Shuri, my own private Castle
+## Full Tilt, a file templater and pre-processor
 
-### Dotfiles generated with Ruby, distributed and tracked with git and installed with [Homesick](https://github.com/technicalpickles/homesick) 
+Full Tilt is a very simple utility: It templates and pre-processes files using [Tilt](https://github.com/rtomayko/tilt)
+
+I use Full Tilt to maintain my dotfiles via [Homesick](https://github.com/technicalpickles/homesick). My 'Castle' is called Castle Shuri. 
 
 #### How?
 1. Put configuration variables in config.yml.
@@ -17,18 +19,16 @@
         homesick list
         homesick symlink shuri
         
-7. Hail to the king, baby!
+7. Done!
 
-#### Tips
-* You can interpolate file names just like you would any string. For example, ```#{@config["theme"]}.itermcolors.erb``` becomes ```Solarized Dark.itermcolors```.
-* Use any configuration variables you want! Anything in ```config.yml``` becomes part of the hash ```@config```.
-* Keep your code nice and DRY -use partials like so ```<%= render_file "partials/header.erb", {prefix: "\""} %>``` So far, there's only 1 option: prefix, which adds a character to the beginning of each line. This is used for making the various types of comments.
-* __Be careful not to put any sensitive data out in the open!__
+#### Huh?!
+If you want to see it in action, run FullTilt against the files in the src/ folder.
+
+__Be careful not to put any sensitive data out in the open!__
 
 #### Yet to come...
 * Make some themes- Solarized Dark is always popular...
 * K-clustering to create color themes from an image.
-* Limit each line to 80 characters. 
 * Hack on Homesick.
 
 
