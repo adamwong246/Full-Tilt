@@ -1,8 +1,8 @@
-<%= Tilt.new('src/includes/_header.erb').render (self.merge({prefix: '"'}))  %>
+<%= Tilt.new('src/includes/_header.erb').render((self), {prefix: "\" "})  %>
 
 <%= render_file '/vim/_line_numbers.erb' %>
 
 <%= Tilt.new('src/includes/vim/_baby.erb').render self  %>
 
 <%= Tilt.new('src/includes/vim/_word_wrap_without_line_breaks.erb').render self  %>
-x
+

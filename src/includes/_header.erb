@@ -1,9 +1,10 @@
-<%= word_wrap((Tilt.new('src/includes/_signature.erb').render (self)), {prefix: "\" "})  %>
+<%= word_wrap(Tilt.new('src/includes/_marque.erb').render(self), {prefix: prefix})  %>
 
-<%= word_wrap((Tilt.new('src/includes/_title.erb').render (self)), {prefix: "\" "})  %>
+"
+<%= word_wrap(Tilt.new('src/includes/_title.erb').render(self), {prefix: prefix})  %>
 
-<%= word_wrap((Tilt.new('src/includes/_date.erb').render (self)), {prefix: "\" "})  %>
+<%= word_wrap(DateTime.now.to_s, {prefix: prefix})   %>
 
-<%= word_wrap((Tilt.new('src/includes/_description.erb').render (self)), {prefix: "\" "}) %>
+<%= word_wrap(Tilt.new('src/includes/_description.erb').render(self), {prefix: prefix})  %>
 
-<%= word_wrap((Tilt.new('src/includes/_license.erb').render   (self)), {prefix: "\" "}) %>
+<%= word_wrap(Tilt.new('src/includes/_license.erb').render(self), {prefix: prefix})  %>

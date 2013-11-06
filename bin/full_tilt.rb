@@ -3,10 +3,13 @@
 require 'rubygems' 
 require 'bundler/setup'
 
+require 'debugger'
+
 require 'yaml'
 require 'pathname'
 require 'tilt'
 require 'colorize'
+require 'artii'
 
 
 ROOT          = Pathname(File.dirname(__FILE__)).parent
@@ -55,7 +58,7 @@ def word_wrap(text, options = {})
 
 end
 
-def render_file (path, confs=self)
+def render_file (path, confs={})
   Tilt.new("src/includes/#{path}").render confs
 end
 
@@ -81,7 +84,7 @@ Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
       
     rescue Exception => e
       puts e.message.blue
-      puts e.backtrace
+      puts e.backtrace.join("\n").blue
     end      
 
 
@@ -93,3 +96,5 @@ Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
     
   end
 end
+
+puts (Artii::Base.new(font: 'basic').asciify ("Done     :-)")).green
