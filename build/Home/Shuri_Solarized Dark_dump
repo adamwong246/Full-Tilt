@@ -4,7 +4,7 @@
  (there's a comment here but you can't see it! )
 
 Just printing out a string
-A dump of the configurations:  {"author"=>"Adam Wong", "castle"=>"Shuri", "theme"=>"Solarized Dark", "repo"=>"https://github.com/adamwong246/full-tilt", "colors"=>{"base03"=>"002b36", "base02"=>"073642", "base01"=>"586e75", "base00"=>"657b83", "base0"=>"839496", "base1"=>"93a1a1", "base2"=>"eee8d5", "base3"=>"fdf6e3", "yellow"=>"b58900", "orange"=>"cb4b16", "red"=>"dc322f", "magenta"=>"d33682", "violet"=>"6c71c4", "blue"=>"268bd2", "cyan"=>"2aa198", "green"=>"859900"}, :prefix=>"\" "}
+A dump of the configurations:  {"author"=>"Adam Wong", "castle"=>"Shuri", "theme"=>"Solarized Dark", "repo"=>"https://github.com/adamwong246/full-tilt", "colors"=>{"black"=>"000000", "gray"=>"5D5D5D", "darkre"=>"C75646", "red"=>"E09690", "darkgreen"=>"8EB33B", "green"=>"CDEE69", "darkyellow"=>"D0B03C", "yellow"=>"FFE377", "darkblue"=>"72B3CC", "blue"=>"9CD9F0", "darkmagenta"=>"C8A0D1", "magenta"=>"FBB1F9", "darkcyan"=>"218693", "cyan"=>"77DFD8", "lightgray"=>"B0B0B0", "white"=>"F7F7F7"}, :prefix=>"\" "}
 
 It can be accessed thus: Adam Wong
 

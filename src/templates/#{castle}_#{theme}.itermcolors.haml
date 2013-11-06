@@ -1,29 +1,30 @@
+- c = "iterm/_chunk.haml"
 !!!
 !!! XML
 %plist{version: "1.0"}
   %dict
-    #{ render_file("iterm/_chunk.haml", {name: "Foreground Color",    color: colors.base03  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Background Color",    color: colors.base02  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 0 Color",        color: colors.base02  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 8 Color",        color: colors.base01  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 1 Color",        color: colors.base00  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 9 Color",        color: colors.base0   })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 2 Color",        color: colors.base1   })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 10 Color",       color: colors.base2   })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 3 Color",        color: colors.base3   })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 11 Color",       color: colors.yellow  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 4 Color",        color: colors.orange  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 12 Color",       color: colors.red     })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 5 Color",        color: colors.magenta })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 13 Color",       color: colors.violet  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 6 Color",        color: colors.blue    })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 14 Color",       color: colors.cyan    })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 13 Color",       color: colors.green   })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 7 Color",        color: colors.base03  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Ansi 15 Color",       color: colors.base02  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Bold Color",          color: colors.base01  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Cursor Color",        color: colors.base00  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Cursor Text Color",   color: colors.base0   })}
-    #{ render_file("iterm/_chunk.haml", {name: "Selected Text Color", color: colors.base01  })}
-    #{ render_file("iterm/_chunk.haml", {name: "Selection Color",     color: colors.base02  })}
+    #{ render_file(c, {name: "Foreground Color",    color: colors.white     })}
+    #{ render_file(c, {name: "Background Color",    color: colors.black     })}
+    #{ render_file(c, {name: "Ansi 0 Color",        color: colors.gray      })}
+    #{ render_file(c, {name: "Ansi 8 Color",        color: colors.darkred   })}
+    #{ render_file(c, {name: "Ansi 1 Color",        color: colors.red       })}
+    #{ render_file(c, {name: "Ansi 9 Color",        color: colors.darkgreen })}
+    #{ render_file(c, {name: "Ansi 2 Color",        color: colors.green     })}
+    #{ render_file(c, {name: "Ansi 10 Color",       color: colors.darkyellow   })}
+    #{ render_file(c, {name: "Ansi 3 Color",        color: colors.yellow   })}
+    #{ render_file(c, {name: "Ansi 11 Color",       color: colors.darkblue  })}
+    #{ render_file(c, {name: "Ansi 4 Color",        color: colors.blue  })}
+    #{ render_file(c, {name: "Ansi 12 Color",       color: colors.darkmagenta     })}
+    #{ render_file(c, {name: "Ansi 5 Color",        color: colors.magenta })}
+    #{ render_file(c, {name: "Ansi 13 Color",       color: colors.cyan  })}
+    #{ render_file(c, {name: "Ansi 6 Color",        color: colors.lightgray    })}
+    #{ render_file(c, {name: "Ansi 14 Color",       color: colors.white    })}
+    #{ render_file(c, {name: "Ansi 13 Color",       color: colors.black   })}
+    #{ render_file(c, {name: "Ansi 7 Color",        color: colors.gray  })}
+    #{ render_file(c, {name: "Ansi 15 Color",       color: colors.darkred  })}
+    #{ render_file(c, {name: "Bold Color",          color: colors.red  })}
+    #{ render_file(c, {name: "Cursor Color",        color: colors.darkgreen  })}
+    #{ render_file(c, {name: "Cursor Text Color",   color: colors.green   })}
+    #{ render_file(c, {name: "Selected Text Color", color: colors.darkyellow  })}
+    #{ render_file(c, {name: "Selection Color",     color: colors.yellow  })}
     
