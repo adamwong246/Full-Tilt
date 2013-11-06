@@ -1,0 +1,7 @@
+Artii sampler
+
+Artii::Base.new.all_fonts.each {|k, v| puts (Artii::Base.new font: k).asciify(k)}
+
+<% Artii::Base.new.all_fonts.each do |k, v| %>
+	<%= (Artii::Base.new font: k).asciify(k) rescue "error: #{k}" %>
+<% end %>
