@@ -1,7 +1,12 @@
-<%= Tilt.new('src/includes/vim/_header.erb').render ({header_title: "Baby Vim", header_description: "Vim for babies who still use the mouse. Who's a cute wittle baby who still needs a mouse? YOU ARE! Cute wittle noob... "})  %>
+<%= Tilt.new('src/includes/vim/_section.erb').render({
+	header_title: "Baby Vim", 
+	header_description: "Vim for babies who still use the mouse. Who's a cute wittle baby who still needs a mouse? YOU ARE! Cute wittle noob...\nThis section enables scrolling with the mouse.",
+	body: <<-eos
 
-" Allow mouse scrolling
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
+eos
+
+})  %>

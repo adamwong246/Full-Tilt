@@ -1,11 +1,3 @@
-<%= "\"" * 80 %>
-
-<%= word_wrap(self[:header_title], {prefix: "\" "})  %>
-
-<%= word_wrap(self[:header_description], {prefix: "\" "})  %>
-
-<%= "\"" * 80 %>
-
-<%= yield %>
-
-<%= "\"" * 80 %>
+<%= Tilt.new('src/includes/vim/_header.erb').render self  %>
+<%= self[:body] %>
+<%= Tilt.new('src/includes/vim/_footer.erb').render self  %>

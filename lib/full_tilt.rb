@@ -1,4 +1,4 @@
-class Shuri
+class FullTilt
   def self.hi
     puts "Hello world!"
   end

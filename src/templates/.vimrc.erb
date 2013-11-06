@@ -1,17 +1,8 @@
 <%= Tilt.new('src/includes/_header.erb').render (self.merge({prefix: '"'}))  %>
 
-
-" Turn on line number
-:set number
-
-" Turn on syntax highlighting
-:syntax on
+<%= render_file '/vim/_line_numbers.erb' %>
 
 <%= Tilt.new('src/includes/vim/_baby.erb').render self  %>
 
-" Word wrap without line breaks
-" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
-:set wrap
-:set linebreak
-:set nolist  " list disables linebreak
-
+<%= Tilt.new('src/includes/vim/_word_wrap_without_line_breaks.erb').render self  %>
+x

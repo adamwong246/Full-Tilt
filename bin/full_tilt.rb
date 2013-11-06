@@ -55,6 +55,10 @@ def word_wrap(text, options = {})
 
 end
 
+def render_file (path, confs=self)
+  Tilt.new("src/includes/#{path}").render confs
+end
+
 # compile all the liquid files
 Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
   if File.file?(file_name)    
