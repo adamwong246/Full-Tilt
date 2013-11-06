@@ -1,8 +1,12 @@
-<%= Tilt.new('src/includes/_header.erb').render((self), {prefix: "\" "})  %>
+<% 
+	set(:prefix, "\" ")
+%>
 
-<%= render_file '/vim/_line_numbers.erb' %>
+<%= render_file '_header.erb'  %>
 
-<%= Tilt.new('src/includes/vim/_baby.erb').render self  %>
+<%= render_file 'vim/_line_numbers.erb' %>
 
-<%= Tilt.new('src/includes/vim/_word_wrap_without_line_breaks.erb').render self  %>
+<%= render_file'vim/_baby.erb' %>
+
+<%= render_file'vim/_word_wrap_without_line_breaks.erb' %>
 

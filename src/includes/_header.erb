@@ -1,10 +1,10 @@
-<%= word_wrap(Tilt.new('src/includes/_marque.erb').render(self), {prefix: prefix})  %>
+<%= word_wrap(render_file('_marque.erb'))  %>
 
 "
-<%= word_wrap(Tilt.new('src/includes/_title.erb').render(self), {prefix: prefix})  %>
+<%= word_wrap(render_file('_title.erb')) %>
 
-<%= word_wrap(DateTime.now.to_s, {prefix: prefix})   %>
+<%= word_wrap(DateTime.now.to_s)   %>
 
-<%= word_wrap(Tilt.new('src/includes/_description.erb').render(self), {prefix: prefix})  %>
+<%= word_wrap(render_file('_description.erb')) %>
 
-<%= word_wrap(Tilt.new('src/includes/_license.erb').render(self), {prefix: prefix})  %>
+<%= word_wrap(render_file('_license.erb') )%>
