@@ -4,11 +4,11 @@
 
 Full Tilt is a very simple utility: It templates and pre-processes files using [Tilt](https://github.com/rtomayko/tilt)
 
-I use Full Tilt to maintain my dotfiles via [Homesick](https://github.com/technicalpickles/homesick). My 'Castle' is called [Castle Shuri](https://github.com/adamwong246/shuri). 
+I use Full Tilt to maintain my dotfiles via [Homesick](https://github.com/technicalpickles/homesick). My 'Castle' is called [Castle Shuri](https://github.com/adamwong246/Castle-Shuri). 
 
 #### How?
 
-As an example, take a look at [Castle Shuri](https://github.com/adamwong246/shuri)
+As an example, take a look at [Castle Shuri](https://github.com/adamwong246/Castle-Shuri)
 
 1. Put configuration variables in config.yml.
 2. Make a template for each configuration file you want to generate.
