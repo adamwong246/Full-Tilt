@@ -13,6 +13,8 @@ require 'artii'
 
 require 'haml'
 require "thor"
-require 'full_tilt'
+
+require '../lib/full_tilt.rb'
+
  
 FullTilt.start(ARGV)
