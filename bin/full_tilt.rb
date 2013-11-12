@@ -16,14 +16,14 @@ require 'haml'
 
 ROOT          = Pathname(File.dirname(__FILE__)).parent
 BUILD         = "build"
-HOME          = "Home"
+
 SRC           = "src"
 INCLUDES      = "includes"
 TEMPLATES     = "templates"
 CONF          = "config.yml"
 
 BUILD_DIR     = ROOT.join(BUILD)
-HOME_DIR      = BUILD_DIR.join(HOME)
+
 SOURCE_DIR    = ROOT.join(SRC)
 INCLUDE_DIR   = SOURCE_DIR.join(INCLUDES) 
 TEMPLATES_DIR = SOURCE_DIR.join(TEMPLATES)
@@ -48,6 +48,8 @@ conf = YAML.load_file(CONF)
 
 class Hash
   def method_missing m
+    puts "METHOD: #{m}"
+    debugger
     self[m.to_s]
   end
 end
@@ -71,8 +73,9 @@ def word_wrap(text, options = {})
 
 end
 
-def render_file (path, confs= {})  
-  Tilt.new("src/includes/#{path}").render confs.merge(self)
+def render_file (path, confs= {})
+  puts "RENDERING FILE: #{path} with #{confs}"
+  Tilt.new(path).render self.merge!(confs)
 end
 
     def red_component_as_percent(color)
@@ -88,6 +91,7 @@ end
     end
 
     def component(color, component)
+      puts "COLOR: " + color
       map = {
         red: 0,
         green: 1,
@@ -96,31 +100,51 @@ end
       color.scan(/../).map {|color| color.to_i(16)}[map[component]]
     end
 
+FileUtils.rm_rf('build/')
+Dir.mkdir('build')
 
 # compile all the liquid files
 Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
-  if File.file?(file_name)    
-    file_name_base   = File.basename(file_name, '.*')
-    file_name_input  = file_name
-    puts "Processing #{file_name_input}..."
+  begin
+    if File.file?(file_name)
+      file_name_base   = File.basename(file_name, '.*')
+      dest = BUILD_DIR.join(Pathname.new(file_name).relative_path_from(TEMPLATES_DIR))
+      ext = File.extname(file_name)
+      puts "Processing #{file_name}, #{ext}..."
 
-    begin
-      template = Tilt.new(file_name_input)
-      output_string = template.render conf
+      templates = ext.split(".").map{|e| Tilt[e]}.compact
 
-      file_name_output = file_name.gsub(TEMPLATES, HOME).gsub(SRC, BUILD).chomp(File.extname(file_name))
+      if templates.length == 0
+        puts "not recognized by tilt, just copying to: #{dest}"
 
-      file_name_output_template = Tilt.new(File.extname(file_name)){file_name_output}
-      file_name_output_inter = file_name_output_template.render(conf).strip
+        FileUtils.mkpath dest.dirname
+        FileUtils.cp(file_name, dest)
+      else
 
+        output_string = File.open(file_name, "r").read
 
-      puts "...#{file_name_output_inter}"
-      File.open(file_name_output_inter, 'w') { |f| f.puts(output_string) }
-      
+        templates.each{|template|
+          puts template
+          # template = Tilt.new(file_name)
+          output_string = template.new{output_string}.render conf
+        }
+
+        puts "contents OK"
+
+        file_name_output_template = Tilt[ext].new{file_name}
+        file_name_output_inter = file_name_output_template.render(conf).strip
+
+        endr = BUILD_DIR.join(Pathname.new(file_name_output_inter).relative_path_from(TEMPLATES_DIR))
+        puts "...#{endr}"
+        File.open(endr, 'w') { |f| f.puts(output_string) }
+
+      end
+    end
+
     rescue Exception => e
-      puts e.message.blue
-      puts e.backtrace.join("\n").blue
-    end      
+      puts e.message
+      puts e.backtrace
+    end
 
 
     # template = File.new(file_name_input).read  
@@ -129,7 +153,5 @@ Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
     # file_name_output = file_name.gsub(TEMPLATES, HOME).gsub(SRC, BUILD).chomp(File.extname(file_name))
     # file_name_output_inter = Liquid::Template.parse(file_name_output).render! conf
     
-  end
-end
 
-puts (Artii::Base.new(font: 'basic').asciify ("Done     :-)")).green
+end

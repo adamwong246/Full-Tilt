@@ -2,18 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e41c62da-b459-45e7-861b-5238a27dce51" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb" afterPath="$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/Shuri_Solarized Dark.tmTheme" afterPath="$PROJECT_DIR$/home/Shuri_Solarized Dark.tmTheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate.rb" afterPath="$PROJECT_DIR$/generate.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/title.erb" afterPath="$PROJECT_DIR$/partials/title.erb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/.vimrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/Shuri_SMYCK.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/Shuri_SMYCK.itermcolors" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/Shuri_SMYCK_dump" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/Shuri_Solarized Dark.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/Shuri_Solarized Dark.itermcolors" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/Shuri_Solarized Dark.itermcolors&#10;" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Home/Shuri_Solarized Dark_dump" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/#{castle}_#{theme}.html.haml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/#{castle}_#{theme}.itermcolors.haml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/.vimrc.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wip/#{castle}_#{theme}.itermcolors.erb" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/includes/iterm/_chunk.haml" afterPath="$PROJECT_DIR$/src/includes/iterm/_chunk.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/&lt;%=castle%&gt;_&lt;%=theme%&gt;_dump.erb" afterPath="$PROJECT_DIR$/src/templates/&lt;%=castle%&gt;_&lt;%=theme%&gt;_dump.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/includes/_header.erb" afterPath="$PROJECT_DIR$/src/includes/_header.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/full_tilt.rb" afterPath="$PROJECT_DIR$/bin/full_tilt.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shuri.iml" afterPath="$PROJECT_DIR$/.idea/shuri.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="shuri.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383287462224" ignored="false" />
-    <file path="$PROJECT_DIR$/../projectv/app/models/user.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
-    <file path="$PROJECT_DIR$/../projectv/app/models/challenge.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
+    <file path="/Dummy.txt" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384242114751" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/user.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/challenge.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241262" ignored="false" />
     <file path="$PROJECT_DIR$/../projectv/app/controllers/challenges_controller.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
     <file path="$PROJECT_DIR$/../projectv/app/views/challenges/new/_who_can_play.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1383323498107" ignored="false" />
+    <file path="/full_tilt.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384246720837" ignored="false" />
+    <file path="/#{castle}_#{theme}.itermcolors.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384245569979" ignored="false" />
+    <file path="/_header.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384244517253" ignored="false" />
+    <file path="/&lt;%=castle%&gt;_&lt;%=theme%&gt;_dump.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384244827957" ignored="false" />
+    <file path="$PROJECT_DIR$/src/wip/#{castle}_#{theme}.itermcolors.haml" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384244959184" ignored="false" />
+    <file path="/_chunk.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384246474190" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/assets/javascripts/picture_upload.js" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/sponsor_user.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/user_badge.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/goodday_badday.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/config/locales/en.yml" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/views/challenges/new/_describe_it.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/controllers/brand_images_controller.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/brand_image.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/fistbump.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/sponsor.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/config/locales/activerecord.en.yml" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/views/challenges/_form_js.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241555" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/ability.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241556" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/views/users/registrations/_device_connection_fitbit.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241556" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/config/routes.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241556" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/models/comment.rb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384277241556" ignored="false" />
+    <file path="$PROJECT_DIR$/../projectv/app/views/shared/_jrac_upload_and_edit.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384278530026" ignored="false" />
+    <file path="/_jrac_upload_and_edit.html.erb" changelist="e41c62da-b459-45e7-861b-5238a27dce51" time="1384278449147" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +71,53 @@
     <favorites_list name="shuri" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="full_tilt.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/full_tilt.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="11" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.7603196">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tilt.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p195/gems/tilt-1.4.1/lib/tilt.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="24" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/includes/_header.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="#{castle}_#{theme}.itermcolors.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/templates/#{castle}_#{theme}.itermcolors.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="4" selection-start="390" selection-end="390" vertical-scroll-proportion="-4.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_chunk.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/includes/iterm/_chunk.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="6" selection-start="12" selection-end="23" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -51,14 +136,19 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb" />
+        <option value="$PROJECT_DIR$/src/includes/_header.erb" />
+        <option value="$PROJECT_DIR$/src/templates/&lt;%=castle%&gt;_&lt;%=theme%&gt;_dump.erb" />
+        <option value="$PROJECT_DIR$/src/includes/iterm/_chunk.haml" />
+        <option value="$PROJECT_DIR$/src/templates/#{castle}_#{theme}.itermcolors.erb" />
+        <option value="$PROJECT_DIR$/src/includes/iterm/_chunk.html.erb" />
+        <option value="$PROJECT_DIR$/bin/full_tilt.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="-300" />
-    <option name="width" value="1920" />
-    <option name="height" value="1200" />
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -94,14 +184,16 @@
               <option name="myItemId" value="shuri" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shuri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shuri" />
+              <option name="myItemId" value="tilt (v1.4.1, RVM: ruby-2.0.0-p195) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -111,7 +203,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tilt (v1.4.1, RVM: ruby-2.0.0-p195) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tilt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="shuri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tilt (v1.4.1, RVM: ruby-2.0.0-p195) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shuri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shuri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulltilt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shuri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulltilt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shuri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulltilt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -125,11 +295,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shuri" />
+              <option name="myItemId" value="fulltilt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="decomposers" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shuri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulltilt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iterm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shuri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulltilt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -153,26 +363,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-300" width="1920" height="1200" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20157818" sideWeight="0.67008984" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -236,16 +446,56 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/#{@config[&quot;castle&quot;]}_#{@config[&quot;theme&quot;]}.tmTheme.erb">
+    <entry file="file://$PROJECT_DIR$/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="373" selection-end="373" vertical-scroll-proportion="0.17094018">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p195/gems/tilt-1.4.1/bin/tilt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3568575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/templates/&lt;%=castle%&gt;_&lt;%=theme%&gt;_dump.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="23" column="16" selection-start="438" selection-end="438" vertical-scroll-proportion="0.47455296">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/includes/iterm/_chunk.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="12" selection-end="23" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/#{castle}_#{theme}.itermcolors.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="390" selection-end="390" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/includes/_header.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p195/gems/tilt-1.4.1/lib/tilt.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="24" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/full_tilt.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="11" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.7603196">
           <folding />
         </state>
       </provider>

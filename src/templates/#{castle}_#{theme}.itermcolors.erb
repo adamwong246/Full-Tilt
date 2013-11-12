@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<% chunk = "src/includes/iterm/_chunk.html.erb" %>
+<%= render_file "src/includes/_header.erb", {prefix: "<!-- ", suffix: ' -->'} %>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<%= render chunk, {color_title: "Ansi 0 Color",        color: colors.black  } %>
+  <%= render chunk, {color_title: "Ansi 1 Color",        color: colors.gray  } %>
+  <%= render chunk, {color_title: "Ansi 10 Color",       color: colors.darkred  } %>
+  <%= render chunk, {color_title: "Ansi 11 Color",       color: colors.red  } %>
+  <%= render chunk, {color_title: "Ansi 12 Color",       color: colors.darkgreen   } %>
+  <%= render chunk, {color_title: "Ansi 13 Color",       color: colors.green   } %>
+  <%= render chunk, {color_title: "Ansi 14 Color",       color: colors.darkyellow   } %>
+  <%= render chunk, {color_title: "Ansi 15 Color",       color: colors.yellow   } %>
+  <%= render chunk, {color_title: "Ansi 2 Color",        color: colors.darkblue  } %>
+  <%= render chunk, {color_title: "Ansi 3 Color",        color: colors.blue  } %> 
+  <%= render chunk, {color_title: "Ansi 4 Color",        color: colors.darkmagenta     } %>
+  <%= render chunk, {color_title: "Ansi 5 Color",        color: colors.magenta } %>
+  <%= render chunk, {color_title: "Ansi 6 Color",        color: colors.darkcyan  } %>
+  <%= render chunk, {color_title: "Ansi 7 Color",        color: colors.cyan    } %>
+  <%= render chunk, {color_title: "Ansi 8 Color",        color: colors.lightgray    } %>
+  <%= render chunk, {color_title: "Ansi 9 Color",        color: colors.green   } %>
+  <%= render chunk, {color_title: "Background Color",    color: colors.white   } %>
+  <%= render chunk, {color_title: "Bold Color",          color: colors.white   } %>
+  <%= render chunk, {color_title: "Cursor Color",        color: colors.white   } %>
+  <%= render chunk, {color_title: "Cursor Text Color",   color: colors.white   } %>
+  <%= render chunk, {color_title: "Foreground Color",    color: colors.white   } %>
+  <%= render chunk, {color_title: "Selected Text Color", color: colors.white   } %>
+  <%= render chunk, {color_title: "Selection Color",     color: colors.white   } %>
+
+</dict>
+</plist>

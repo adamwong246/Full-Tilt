@@ -1,0 +1,23 @@
+<key>
+  <%= self[:name] %>
+</key>
+<dict>
+  <key>
+    Blue Component
+  </key>
+  <real>
+    <%= blue_component_as_percent(self[:color]) %>
+  </real>
+  <key>
+    Green Component
+  </key>
+  <real>
+    <%= green_component_as_percent(self[:color]) %>
+  </real>
+  <key>
+    Red Component
+  </key>
+  <real>
+    <%= red_component_as_percent(self[:color]) %>
+  </real>
+</dict>
