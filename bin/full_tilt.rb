@@ -48,8 +48,6 @@ conf = YAML.load_file(CONF)
 
 class Hash
   def method_missing m
-    puts "METHOD: #{m}"
-    debugger
     self[m.to_s]
   end
 end
