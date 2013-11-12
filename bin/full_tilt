@@ -1,20 +1,3 @@
 #!/usr/bin/env ruby
 
-require 'rubygems' 
-require 'bundler/setup'
-
-require 'debugger'
-
-require 'rmagick'
-require 'yaml'
-require 'pathname'
-require 'tilt'
-require 'colorize'
-require 'artii'
-
-require 'haml'
-require "thor"
-
-require '../lib/full_tilt.rb'
-
 FullTilt.start(ARGV)
