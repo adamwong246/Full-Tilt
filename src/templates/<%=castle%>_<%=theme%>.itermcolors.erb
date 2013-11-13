@@ -7,29 +7,29 @@
 <plist version="1.0">
 <% chunk = "src/includes/iterm/_chunk.html.erb" %>
 <dict>  
-	<%= render_file chunk, {'color_title' => "Ansi 0 Color",        'color' => colors.black  } %>
-  <%= render_file chunk, {'color_title' => "Ansi 1 Color",        'color' => colors.gray  } %>
-  <%= render_file chunk, {'color_title' => "Ansi 10 Color",       'color' => colors.darkred  } %>
-  <%= render_file chunk, {'color_title' => "Ansi 11 Color",       'color' => colors.red  } %>
-  <%= render_file chunk, {'color_title' => "Ansi 12 Color",       'color' => colors.darkgreen   } %>
-  <%= render_file chunk, {'color_title' => "Ansi 13 Color",       'color' => colors.green   } %>
-  <%= render_file chunk, {'color_title' => "Ansi 14 Color",       'color' => colors.darkyellow   } %>
-  <%= render_file chunk, {'color_title' => "Ansi 15 Color",       'color' => colors.yellow   } %>
-  <%= render_file chunk, {'color_title' => "Ansi 2 Color",        'color' => colors.darkblue  } %>
-  <%= render_file chunk, {'color_title' => "Ansi 3 Color",        'color' => colors.blue  } %> 
-  <%= render_file chunk, {'color_title' => "Ansi 4 Color",        'color' => colors.darkmagenta     } %>
-  <%= render_file chunk, {'color_title' => "Ansi 5 Color",        'color' => colors.magenta } %>
-  <%= render_file chunk, {'color_title' => "Ansi 6 Color",        'color' => colors.darkcyan  } %>
-  <%= render_file chunk, {'color_title' => "Ansi 7 Color",        'color' => colors.cyan    } %>
-  <%= render_file chunk, {'color_title' => "Ansi 8 Color",        'color' => colors.lightgray    } %>
-  <%= render_file chunk, {'color_title' => "Ansi 9 Color",        'color' => colors.green   } %>
-  <%= render_file chunk, {'color_title' => "Background Color",    'color' => colors.white   } %>
-  <%= render_file chunk, {'color_title' => "Bold Color",          'color' => colors.white   } %>
-  <%= render_file chunk, {'color_title' => "Cursor Color",        'color' => colors.white   } %>
-  <%= render_file chunk, {'color_title' => "Cursor Text Color",   'color' => colors.white   } %>
-  <%= render_file chunk, {'color_title' => "Foreground Color",    'color' => colors.white   } %>
-  <%= render_file chunk, {'color_title' => "Selected Text Color", 'color' => colors.white   } %>
-  <%= render_file chunk, {'color_title' => "Selection Color",     'color' => colors.white   } %>
+	<%= render_file chunk, {'color_title' => "Ansi 0 Color",        'color' => colors.black       } %> <%# normal black %>
+  <%= render_file chunk, {'color_title' => "Ansi 8 Color",        'color' => colors.gray        } %> <%# bright black %>
+  <%= render_file chunk, {'color_title' => "Ansi 1 Color",        'color' => colors.darkred     } %> <%# normal red   %>
+  <%= render_file chunk, {'color_title' => "Ansi 9 Color",        'color' => colors.red         } %> <%# bright red   %>
+  <%= render_file chunk, {'color_title' => "Ansi 2 Color",        'color' => colors.darkgreen   } %> <%# normal green   %>
+  <%= render_file chunk, {'color_title' => "Ansi 10 Color",       'color' => colors.green       } %> <%# bright green   %>
+  <%= render_file chunk, {'color_title' => "Ansi 3 Color",        'color' => colors.darkyellow  } %> <%# normal yellow   %>
+  <%= render_file chunk, {'color_title' => "Ansi 11 Color",       'color' => colors.yellow      } %> <%# bright yellow   %>
+  <%= render_file chunk, {'color_title' => "Ansi 4 Color",        'color' => colors.darkblue    } %> <%# normal blue   %>
+  <%= render_file chunk, {'color_title' => "Ansi 12 Color",       'color' => colors.blue        } %> <%# bright blue   %>
+  <%= render_file chunk, {'color_title' => "Ansi 5 Color",        'color' => colors.darkmagenta } %> <%# normal magenta   %>
+  <%= render_file chunk, {'color_title' => "Ansi 13 Color",       'color' => colors.magenta     } %> <%# bright magenta   %>
+  <%= render_file chunk, {'color_title' => "Ansi 6 Color",        'color' => colors.darkcyan    } %> <%# normal cyan   %>
+  <%= render_file chunk, {'color_title' => "Ansi 14 Color",       'color' => colors.cyan        } %> <%# bright cyan   %>
+  <%= render_file chunk, {'color_title' => "Ansi 7 Color",        'color' => colors.lightgray   } %> <%# normal white   %>
+  <%= render_file chunk, {'color_title' => "Ansi 15 Color",       'color' => colors.white       } %> <%# bright white   %>
+  <%= render_file chunk, {'color_title' => "Background Color",    'color' => colors.black       } %> 
+  <%= render_file chunk, {'color_title' => "Bold Color",          'color' => colors.red         } %>
+  <%= render_file chunk, {'color_title' => "Cursor Color",        'color' => colors.blue        } %>
+  <%= render_file chunk, {'color_title' => "Cursor Text Color",   'color' => colors.green       } %>
+  <%= render_file chunk, {'color_title' => "Foreground Color",    'color' => colors.lightgray   } %>
+  <%= render_file chunk, {'color_title' => "Selected Text Color", 'color' => colors.yellow      } %>
+  <%= render_file chunk, {'color_title' => "Selection Color",     'color' => colors.cyan        } %>
 
 </dict>
 </plist>
