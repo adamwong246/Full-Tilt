@@ -3,7 +3,6 @@
 <% comment = "\"" %>
 <% white_space = " " %>
 <% t = (comment * first_line_comment_pad) + (white_space * first_line_whitepsace_pad) + self[:header_title] + (white_space * first_line_whitepsace_pad) %>
-
 <%= t + (comment*(80-t.length)) %>
 
 <%= word_wrap(self[:header_description], {prefix: comment + white_space, suffix: white_space + comment }) if self[:header_description] %>

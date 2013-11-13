@@ -13,7 +13,6 @@ require 'artii'
 
 require 'haml'
 
-
 ROOT          = Pathname(File.dirname(__FILE__)).parent
 BUILD         = "build"
 
@@ -52,6 +51,10 @@ class Hash
   end
 end
 
+def files_as_hash
+  "asd"
+end
+
 def set (key, value)
   self[key] = value
 end
@@ -72,8 +75,8 @@ def word_wrap(text, options = {})
 end
 
 def render_file (path, confs= {})
-  puts "RENDERING FILE: #{path} with #{confs}"
-  Tilt.new(path).render self.merge!(confs)
+  # puts "RENDERING FILE: #{path} with #{confs}"
+  Tilt.new(path).render self.merge(confs)
 end
 
     def red_component_as_percent(color)
@@ -89,7 +92,6 @@ end
     end
 
     def component(color, component)
-      puts "COLOR: " + color
       map = {
         red: 0,
         green: 1,
@@ -127,13 +129,16 @@ Dir.glob("#{TEMPLATES_DIR}/**/**", File::FNM_DOTMATCH) do |file_name|
           output_string = template.new{output_string}.render conf
         }
 
-        puts "contents OK"
+        # puts "contents OK"
 
         file_name_output_template = Tilt[ext].new{file_name}
         file_name_output_inter = file_name_output_template.render(conf).strip
 
-        endr = BUILD_DIR.join(Pathname.new(file_name_output_inter).relative_path_from(TEMPLATES_DIR))
+        endr = BUILD_DIR.join(Pathname.new(file_name_output_inter.chomp(File.extname(file_name))).relative_path_from(TEMPLATES_DIR))
+
         puts "...#{endr}"
+
+        FileUtils.mkpath dest.dirname
         File.open(endr, 'w') { |f| f.puts(output_string) }
 
       end
