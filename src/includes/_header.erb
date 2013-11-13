@@ -1,11 +1,5 @@
-<%= word_wrap(render_file('src/includes/_marque.erb'))  %>
+<%= word_wrap(DateTime.now.strftime('%b %e, %l:%M %p %Y'))   %>
 
+<%= word_wrap("Generated with https://github.com/adamwong246/Full-Tilt.") %>
 
-<%= word_wrap(render_file('src/includes/_title.erb')) %>
-
-<%= word_wrap(DateTime.now.to_s)   %>
-
-<%= word_wrap(render_file('src/includes/_description.erb')) %>
-
-<%= word_wrap(render_file('src/includes/_license.erb') )%>
-
+<%= word_wrap("Licensed under the GNU GENERAL PUBLIC LICENSE." )%>

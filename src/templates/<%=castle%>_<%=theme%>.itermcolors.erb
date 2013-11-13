@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<% chunk = "src/includes/iterm/_chunk.html.erb" %>
+
 <%= render_file "src/includes/_header.erb", {prefix: "<!-- ", suffix: ' -->'} %>
+
+
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
+<% chunk = "src/includes/iterm/_chunk.html.erb" %>
+<dict>  
 	<%= render_file chunk, {'color_title' => "Ansi 0 Color",        'color' => colors.black  } %>
   <%= render_file chunk, {'color_title' => "Ansi 1 Color",        'color' => colors.gray  } %>
   <%= render_file chunk, {'color_title' => "Ansi 10 Color",       'color' => colors.darkred  } %>
